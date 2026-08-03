@@ -106,16 +106,42 @@ if (next2) {
   });
 }
 
+// // ===== Step 3: Add-ons =====
+// const addonCards = document.querySelectorAll('.addon_card');
+
+// addonCards.forEach(card => {
+//   card.addEventListener('click', () => {
+//     card.classList.toggle('selected');
+
+//     const addonName = card.textContent.trim();
+
+//     if (card.classList.contains('selected')) {
+//       if (!selectedAddons.includes(addonName)) {
+//         selectedAddons.push(addonName);
+//       }
+//     } else {
+//       selectedAddons = selectedAddons.filter(a => a !== addonName);
+//     }
+//   });
+// });
+
 // ===== Step 3: Add-ons =====
 const addonCards = document.querySelectorAll('.addon_card');
 
 addonCards.forEach(card => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('selected');
+  const checkbox = card.querySelector('input[type="checkbox"]');
+
+  card.addEventListener('click', (e) => {
+    // Prevent double toggle when clicking directly on the checkbox
+    if (e.target !== checkbox) {
+      checkbox.checked = !checkbox.checked;
+    }
+
+    card.classList.toggle('selected', checkbox.checked);
 
     const addonName = card.textContent.trim();
 
-    if (card.classList.contains('selected')) {
+    if (checkbox.checked) {
       if (!selectedAddons.includes(addonName)) {
         selectedAddons.push(addonName);
       }
