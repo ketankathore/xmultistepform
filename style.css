@@ -186,4 +186,48 @@ input:focus {
   .content {
     padding: 32px 24px;
   }
+
+  .hidden {
+  display: none;
+}
+
+.plans {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.plan_card {
+  flex: 1;
+  border: 1px solid #d6d9e6;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.plan_card.selected {
+  border-color: #483eff;
+  background: #f8f9ff;
+}
+
+.addon_card {
+  border: 1px solid #d6d9e6;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #9699ab;
+}
+
+.center {
+  text-align: center;
+}
+
+.plan_card.selected {
+  border-color: #483eff;
+  background: #f8f9ff;
+}
 }
