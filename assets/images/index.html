@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi Step Form</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app">
+
+```
+<aside class="sidebar">
+  <div class="step active">
+    <div class="step-number">1</div>
+    <div class="step-info">
+      <span>Step 1</span>
+      <h4>Your Info</h4>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">2</div>
+    <div class="step-info">
+      <span>Step 2</span>
+      <h4>Select Plan</h4>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">3</div>
+    <div class="step-info">
+      <span>Step 3</span>
+      <h4>Add-ons</h4>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">4</div>
+    <div class="step-info">
+      <span>Step 4</span>
+      <h4>Summary</h4>
+    </div>
+  </div>
+</aside>
+
+<section class="content">
+
+  <div class="step-content" id="step-1">
+
+    <h1>Personal Info</h1>
+
+    <p class="subtitle">
+      Please provide your name, email address, and phone number.
+    </p>
+
+    <form id="info-form">
+
+      <div class="form-group">
+        <div class="label-row">
+          <label>Name</label>
+          <span class="error"></span>
+        </div>
+
+        <input
+          type="text"
+          name="userName"
+          placeholder="e.g. Stephen King"
+        />
+      </div>
+
+      <div class="form-group">
+        <div class="label-row">
+          <label>Email Address</label>
+          <span class="error"></span>
+        </div>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="e.g. stephenking@lorem.com"
+        />
+      </div>
+
+      <div class="form-group">
+        <div class="label-row">
+          <label>Phone Number</label>
+          <span class="error"></span>
+        </div>
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="e.g. 7894561230"
+        />
+      </div>
+
+    </form>
+
+    <div class="buttons">
+      <button id="next-button">Next step</button>
+    </div>
+
+  </div>
+
+</section>
+```
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
